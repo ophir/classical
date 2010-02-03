@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  composer: MyString
+  work_title: MyString
+  orchestra: MyString
+  perform_date: 2010-02-02
+
+two:
+  composer: MyString
+  work_title: MyString
+  orchestra: MyString
+  perform_date: 2010-02-02

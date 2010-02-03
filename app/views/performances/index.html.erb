@@ -1,0 +1,26 @@
+<h1>Listing performances</h1>
+
+<table>
+  <tr>
+    <th>Composer</th>
+    <th>Work title</th>
+    <th>Orchestra</th>
+    <th>Perform date</th>
+  </tr>
+
+<% @performances.each do |performance| %>
+  <tr>
+    <td><%=h performance.composer %></td>
+    <td><%=h performance.work_title %></td>
+    <td><%=h performance.orchestra %></td>
+    <td><%=h performance.perform_date %></td>
+    <td><%= link_to 'Show', performance %></td>
+    <td><%= link_to 'Edit', edit_performance_path(performance) %></td>
+    <td><%= link_to 'Destroy', performance, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New performance', new_performance_path %>

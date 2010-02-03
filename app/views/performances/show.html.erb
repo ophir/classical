@@ -1,0 +1,23 @@
+<p>
+  <b>Composer:</b>
+  <%=h @performance.composer %>
+</p>
+
+<p>
+  <b>Work title:</b>
+  <%=h @performance.work_title %>
+</p>
+
+<p>
+  <b>Orchestra:</b>
+  <%=h @performance.orchestra %>
+</p>
+
+<p>
+  <b>Perform date:</b>
+  <%=h @performance.perform_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_performance_path(@performance) %> |
+<%= link_to 'Back', performances_path %>
