@@ -23,3 +23,186 @@ Migrating to CreatePerformances (20100203005827)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("performances")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 19:02:04) [GET]
+
+ActionController::RoutingError (No route matches "/classical" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 19:02:18) [GET]
+
+ActionController::RoutingError (No route matches "/performance" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-02-02 19:02:22) [GET]
+  [4;36;1mPerformance Load (0.4ms)[0m   [0;1mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 53ms (View: 48, DB: 0) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-02-02 19:02:29) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+Completed in 126ms (View: 120, DB: 0) | 200 OK [http://localhost/performances/new]
+
+
+Processing PerformancesController#create (for 127.0.0.1 at 2010-02-02 19:03:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"lYgCtlUO0o7yH6t93VED/PMAWxO3HmIfnhR0lHOH9Mk=", "performance"=>{"perform_date(1i)"=>"2009", "work_title"=>"Symphony 9", "perform_date(2i)"=>"2", "composer"=>"Beethoven", "perform_date(3i)"=>"3", "orchestra"=>"Vienna Philharmonic"}}
+  [4;35;1mPerformance Create (0.9ms)[0m   [0mINSERT INTO "performances" ("work_title", "created_at", "composer", "perform_date", "updated_at", "orchestra") VALUES('Symphony 9', '2010-02-03 01:03:09', 'Beethoven', '2009-02-03', '2010-02-03 01:03:09', 'Vienna Philharmonic')[0m
+Redirected to http://localhost:3000/performances/1
+Completed in 41ms (DB: 1) | 302 Found [http://localhost/performances]
+
+
+Processing PerformancesController#show (for 127.0.0.1 at 2010-02-02 19:03:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerformance Load (0.2ms)[0m   [0;1mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/performances/1]
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-02-02 19:07:59) [GET]
+  [4;35;1mPerformance Load (0.5ms)[0m   [0mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-02-02 19:08:02) [GET]
+  [4;36;1mPerformance Load (0.5ms)[0m   [0;1mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-02-02 19:08:03) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+Completed in 89ms (View: 84, DB: 0) | 200 OK [http://localhost/performances/new]
+
+
+Processing PerformancesController#create (for 127.0.0.1 at 2010-02-02 19:08:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"lYgCtlUO0o7yH6t93VED/PMAWxO3HmIfnhR0lHOH9Mk=", "performance"=>{"perform_date(1i)"=>"2010", "work_title"=>"", "perform_date(2i)"=>"2", "composer"=>"", "perform_date(3i)"=>"3", "orchestra"=>""}}
+Rendering template within layouts/performances
+Rendering performances/new
+Completed in 25ms (View: 17, DB: 0) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#create (for 127.0.0.1 at 2010-02-02 19:09:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"lYgCtlUO0o7yH6t93VED/PMAWxO3HmIfnhR0lHOH9Mk=", "performance"=>{"perform_date(1i)"=>"2008", "work_title"=>"Symphony 3", "perform_date(2i)"=>"4", "composer"=>"Brahms", "perform_date(3i)"=>"3", "orchestra"=>"English Concert"}}
+  [4;35;1mPerformance Create (0.4ms)[0m   [0mINSERT INTO "performances" ("work_title", "created_at", "composer", "perform_date", "updated_at", "orchestra") VALUES('Symphony 3', '2010-02-03 01:09:31', 'Brahms', '2008-04-03', '2010-02-03 01:09:31', 'English Concert')[0m
+Redirected to http://localhost:3000/performances/2
+Completed in 43ms (DB: 0) | 302 Found [http://localhost/performances]
+
+
+Processing PerformancesController#show (for 127.0.0.1 at 2010-02-02 19:09:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPerformance Load (0.2ms)[0m   [0;1mSELECT * FROM "performances" WHERE ("performances"."id" = 2) [0m
+Rendering template within layouts/performances
+Rendering performances/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/performances/2]
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-02-02 19:11:05) [GET]
+  [4;35;1mPerformance Load (0.6ms)[0m   [0mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#edit (for 127.0.0.1 at 2010-02-02 19:11:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerformance Load (0.2ms)[0m   [0;1mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/edit
+Completed in 23ms (View: 18, DB: 0) | 200 OK [http://localhost/performances/1/edit]
+
+
+Processing PerformancesController#update (for 127.0.0.1 at 2010-02-02 19:11:20) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"lYgCtlUO0o7yH6t93VED/PMAWxO3HmIfnhR0lHOH9Mk=", "id"=>"1", "performance"=>{"perform_date(1i)"=>"2009", "work_title"=>"Symphony 9", "perform_date(2i)"=>"2", "composer"=>"Beethoven", "perform_date(3i)"=>"9", "orchestra"=>"Vienna Philharmonic"}}
+  [4;35;1mPerformance Load (0.2ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+  [4;36;1mPerformance Update (0.3ms)[0m   [0;1mUPDATE "performances" SET "updated_at" = '2010-02-03 01:11:20', "perform_date" = '2009-02-09' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/performances/1
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/performances/1]
+
+
+Processing PerformancesController#show (for 127.0.0.1 at 2010-02-02 19:11:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerformance Load (0.2ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/performances/1]
+
+
+Processing PerformancesController#edit (for 127.0.0.1 at 2010-02-02 19:11:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerformance Load (0.2ms)[0m   [0;1mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/edit
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/performances/1/edit]
+
+
+Processing PerformancesController#update (for 127.0.0.1 at 2010-02-02 19:11:36) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"lYgCtlUO0o7yH6t93VED/PMAWxO3HmIfnhR0lHOH9Mk=", "id"=>"1", "performance"=>{"perform_date(1i)"=>"2009", "work_title"=>"Symphony 9", "perform_date(2i)"=>"2", "composer"=>"", "perform_date(3i)"=>"9", "orchestra"=>"Vienna Philharmonic"}}
+  [4;35;1mPerformance Load (0.2ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/edit
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/performances/1]
+
+
+Processing PerformancesController#update (for 127.0.0.1 at 2010-02-02 19:11:46) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"lYgCtlUO0o7yH6t93VED/PMAWxO3HmIfnhR0lHOH9Mk=", "id"=>"1", "performance"=>{"perform_date(1i)"=>"2009", "work_title"=>"Symphony 9", "perform_date(2i)"=>"2", "composer"=>"Beethoven", "perform_date(3i)"=>"9", "orchestra"=>"Vienna Philharmonic"}}
+  [4;36;1mPerformance Load (0.2ms)[0m   [0;1mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Redirected to http://localhost:3000/performances/1
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/performances/1]
+
+
+Processing PerformancesController#show (for 127.0.0.1 at 2010-02-02 19:11:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerformance Load (0.2ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/performances/1]
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-02-02 19:11:50) [GET]
+  [4;36;1mPerformance Load (0.6ms)[0m   [0;1mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-02-02 19:11:53) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/performances/new]
+
+
+Processing PerformancesController#create (for 127.0.0.1 at 2010-02-02 19:12:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"lYgCtlUO0o7yH6t93VED/PMAWxO3HmIfnhR0lHOH9Mk=", "performance"=>{"perform_date(1i)"=>"2005", "work_title"=>"Violin Concerto No. 5", "perform_date(2i)"=>"2", "composer"=>"Mozart", "perform_date(3i)"=>"3", "orchestra"=>"St Paul Chamber Orchestra"}}
+  [4;35;1mPerformance Create (0.4ms)[0m   [0mINSERT INTO "performances" ("work_title", "created_at", "composer", "perform_date", "updated_at", "orchestra") VALUES('Violin Concerto No. 5', '2010-02-03 01:12:36', 'Mozart', '2005-02-03', '2010-02-03 01:12:36', 'St Paul Chamber Orchestra')[0m
+Redirected to http://localhost:3000/performances/3
+Completed in 41ms (DB: 0) | 302 Found [http://localhost/performances]
+
+
+Processing PerformancesController#show (for 127.0.0.1 at 2010-02-02 19:12:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPerformance Load (87.0ms)[0m   [0;1mSELECT * FROM "performances" WHERE ("performances"."id" = 3) [0m
+Rendering template within layouts/performances
+Rendering performances/show
+Completed in 96ms (View: 4, DB: 87) | 200 OK [http://localhost/performances/3]
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-02-02 19:12:38) [GET]
+  [4;35;1mPerformance Load (0.9ms)[0m   [0mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/performances]
