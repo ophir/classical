@@ -387,3 +387,63 @@ Migrating to AssociateComposersAndPerformances (20100310013701)
   [4;36;1mComposer Create (0.5ms)[0m   [0;1mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES(NULL, '2010-03-10 01:58:31', '2010-03-10 01:58:31')[0m
   [4;36;1mComposer Create (0.5ms)[0m   [0;1mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES(NULL, '2010-03-10 02:04:27', '2010-03-10 02:04:27')[0m
   [4;35;1mPerformance Load (0.4ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances".composer_id = 2) [0m
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-03-09 20:25:25) [GET]
+  [4;36;1mPerformance Load (0.7ms)[0m   [0;1mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#show (for 127.0.0.1 at 2010-03-09 20:37:58) [GET]
+  Parameters: {"id"=>"entry"}
+  [4;35;1mPerformance Load (0.1ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Performance with ID=entry):
+  app/controllers/performances_controller.rb:16:in `show'
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-03-09 20:38:06) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+Completed in 60ms (View: 55, DB: 0) | 200 OK [http://localhost/performances/new]
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-03-09 20:41:57) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+  [4;36;1mComposer Load (0.5ms)[0m   [0;1mSELECT * FROM "composers" [0m
+Completed in 106ms (View: 100, DB: 1) | 200 OK [http://localhost/performances/new]
+
+
+Processing ComposersController#new (for 127.0.0.1 at 2010-03-09 20:43:07) [GET]
+Rendering template within layouts/composers
+Rendering composers/new
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/composers/new]
+
+
+Processing ComposersController#create (for 127.0.0.1 at 2010-03-09 20:43:18) [POST]
+  Parameters: {"commit"=>"Create", "composer"=>{"name"=>"Bach"}, "authenticity_token"=>"6L+W5ztCvs8X9FZDp45XHeHs3OeHTDQXTQYLkb163Ak="}
+  [4;35;1mComposer Create (225.5ms)[0m   [0mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES('Bach', '2010-03-10 02:43:18', '2010-03-10 02:43:18')[0m
+Redirected to http://localhost:3000/composers/3
+Completed in 237ms (DB: 226) | 302 Found [http://localhost/composers]
+
+
+Processing ComposersController#show (for 127.0.0.1 at 2010-03-09 20:43:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mComposer Load (0.2ms)[0m   [0;1mSELECT * FROM "composers" WHERE ("composers"."id" = 3) [0m
+Rendering template within layouts/composers
+Rendering composers/show
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/composers/3]
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-03-09 20:43:29) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+  [4;35;1mComposer Load (0.4ms)[0m   [0mSELECT * FROM "composers" [0m
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/performances/new]

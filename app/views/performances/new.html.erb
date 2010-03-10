@@ -1,11 +1,11 @@
-<h1>New performance</h1>
+<h1>Performance Entry</h1>
 
 <% form_for(@performance) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :composer %><br />
-    <%= f.text_field :composer %>
+    <%= f.label :composer_id %><br>
+    <%= f.select(:composer_id, Composer.all.collect {|c| [ c.name, c.id ] }, { :include_blank => true }) %>
   </p>
   <p>
     <%= f.label :work_title %><br />
@@ -20,7 +20,7 @@
     <%= f.date_select :perform_date %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Add' %>
   </p>
 <% end %>
 

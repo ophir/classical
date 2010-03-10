@@ -1,0 +1,23 @@
+# Logfile created on Tue Mar 09 20:30:50 -0600 2010  [4;36;1mComposer Create (0.4ms)[0m   [0;1mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES('Bach', '2010-03-10 02:36:02', '2010-03-10 02:36:02')[0m
+  [4;36;1mComposer Create (0.4ms)[0m   [0;1mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES('Bach', '2010-03-10 02:37:31', '2010-03-10 02:37:31')[0m
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-03-09 20:37:31) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+Completed in 420ms (View: 416, DB: 0) | 200 OK [http://example.org/performances/new]
+  [4;36;1mComposer Create (0.5ms)[0m   [0;1mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES('Bach', '2010-03-10 02:38:52', '2010-03-10 02:38:52')[0m
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-03-09 20:38:52) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+Completed in 35ms (View: 31, DB: 0) | 200 OK [http://example.org/performances/new]
+  [4;36;1mComposer Create (0.4ms)[0m   [0;1mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES('Bach', '2010-03-10 02:42:34', '2010-03-10 02:42:34')[0m
+
+
+Processing PerformancesController#new (for 127.0.0.1 at 2010-03-09 20:42:34) [GET]
+Rendering template within layouts/performances
+Rendering performances/new
+  [4;35;1mComposer Load (0.3ms)[0m   [0mSELECT * FROM "composers" [0m
+Completed in 36ms (View: 32, DB: 1) | 200 OK [http://example.org/performances/new]
