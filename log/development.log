@@ -206,3 +206,81 @@ Processing PerformancesController#index (for 127.0.0.1 at 2010-02-02 19:12:38) [
 Rendering template within layouts/performances
 Rendering performances/index
 Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-02-02 19:27:45) [GET]
+  [4;36;1mPerformance Load (1.4ms)[0m   [0;1mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 103ms (View: 90, DB: 1) | 200 OK [http://localhost/performances]
+
+
+Processing PerformancesController#show (for 127.0.0.1 at 2010-02-02 19:28:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerformance Load (0.2ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/show
+Completed in 29ms (View: 24, DB: 0) | 200 OK [http://localhost/performances/1]
+
+
+Processing PerformancesController#edit (for 127.0.0.1 at 2010-02-02 19:28:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerformance Load (0.2ms)[0m   [0;1mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/edit
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/performances/1/edit]
+
+
+Processing PerformancesController#update (for 127.0.0.1 at 2010-02-02 19:28:36) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"qU0A4vV3NnyYHCsp/pFFaFyaJFsN2ApitwIVoFpjCjw=", "id"=>"1", "performance"=>{"perform_date(1i)"=>"2009", "work_title"=>"Symphony 9", "perform_date(2i)"=>"2", "composer"=>"", "perform_date(3i)"=>"9", "orchestra"=>"Vienna Philharmonic"}}
+  [4;35;1mPerformance Load (0.2ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances"."id" = 1) [0m
+Rendering template within layouts/performances
+Rendering performances/edit
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/performances/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-09 18:25:52) [GET]
+
+ActionController::RoutingError (No route matches "/time_records/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-09 18:26:05) [GET]
+
+ActionController::RoutingError (No route matches "/timerecords/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-09 18:26:19) [GET]
+
+ActionController::RoutingError (No route matches "/timerecords/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-09 18:26:25) [GET]
+
+ActionController::RoutingError (No route matches "/time_records/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-09 19:12:02) [GET]
+
+ActionController::RoutingError (No route matches "/classical" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-03-09 19:15:53) [GET]
+  [4;36;1mPerformance Load (7.7ms)[0m   [0;1mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 351ms (View: 109, DB: 8) | 200 OK [http://localhost/performances]
