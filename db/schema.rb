@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100310012142) do
+ActiveRecord::Schema.define(:version => 20100310013701) do
 
   create_table "composers", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20100310012142) do
     t.date     "perform_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "composer_id"
   end
 
 end

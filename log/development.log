@@ -305,3 +305,85 @@ Migrating to CreateComposers (20100310012142)
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("composers")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("performances")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePerformances (20100203005827)
+Migrating to CreateComposers (20100310012142)
+Migrating to AssociateComposersAndPerformances (20100310013701)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100310013701')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("composers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("performances")[0m
+
+
+Processing PerformancesController#index (for 127.0.0.1 at 2010-03-09 19:42:44) [GET]
+  [4;35;1mPerformance Load (0.7ms)[0m   [0mSELECT * FROM "performances" [0m
+Rendering template within layouts/performances
+Rendering performances/index
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/performances]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AssociateComposersAndPerformances (20100310013701)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TEMPORARY TABLE "altered_performances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer" varchar(255), "work_title" varchar(255), "orchestra" varchar(255), "perform_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("performances")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "performances"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "performances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer" varchar(255), "work_title" varchar(255), "orchestra" varchar(255), "perform_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_performances")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "altered_performances"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100310013701'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("composers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("performances")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePerformances (20100203005827)
+Migrating to CreateComposers (20100310012142)
+Migrating to AssociateComposersAndPerformances (20100310013701)
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "performances" ADD "composer_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100310013701')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("composers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("performances")[0m
+  [4;36;1mComposer Create (0.5ms)[0m   [0;1mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES(NULL, '2010-03-10 01:58:31', '2010-03-10 01:58:31')[0m
+  [4;36;1mComposer Create (0.5ms)[0m   [0;1mINSERT INTO "composers" ("name", "created_at", "updated_at") VALUES(NULL, '2010-03-10 02:04:27', '2010-03-10 02:04:27')[0m
+  [4;35;1mPerformance Load (0.4ms)[0m   [0mSELECT * FROM "performances" WHERE ("performances".composer_id = 2) [0m
